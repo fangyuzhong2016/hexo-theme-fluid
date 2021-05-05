@@ -79,7 +79,11 @@ page.banner_mask_alpha = page.banner_mask_alpha || theme.post.banner_mask_alpha
                 </div>
               <% } %>
             </div>
-
+            <hr>
+            <% if (theme.post.donate && theme.post.donate.enable){ %>
+              <%- partial('_partial/donate') %>
+            <% } %>
+            
             <% if(page.comments && theme.post.comments.enable) { %>
               <!-- Comments -->
               <article class="comments" id="comments">
